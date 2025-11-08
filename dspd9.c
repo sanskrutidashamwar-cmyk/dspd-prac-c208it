@@ -10,7 +10,6 @@ void insert(int hashTable[], int key) {
     int index = hash(key);
     int startIndex = index;  // to track loop
 
-    // Linear probing in case of collision
     while(hashTable[index] != -1) {
         index = (index + 1) % SIZE;
         if(index == startIndex) {
@@ -35,7 +34,6 @@ int main() {
     int hashTable[SIZE];
     int n, key;
 
-    // Initialize hash table slots to -1 to indicate empty
     for(int i=0; i<SIZE; i++)
         hashTable[i] = -1;
 
@@ -52,3 +50,4 @@ int main() {
 
     return 0;
 }
+
