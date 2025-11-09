@@ -8,8 +8,7 @@ int hash(int key) {
 
 void insert(int hashTable[], int key) {
     int index = hash(key);
-    int startIndex = index;  // to track loop
-
+    int startIndex = index; 
     while(hashTable[index] != -1) {
         index = (index + 1) % SIZE;
         if(index == startIndex) {
@@ -50,4 +49,5 @@ int main() {
 
     return 0;
 }
+
 
